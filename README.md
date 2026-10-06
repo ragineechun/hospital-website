@@ -2,7 +2,27 @@
 
 A five-page informational website in Marathi for Late Sakharam Kundlik Kodre Maternity Home, a Pune Municipal Corporation hospital in Mundhwa, Pune. It is built with plain HTML, CSS and a little JavaScript, with no frameworks.
 
-This is a student project and not the hospital's official website.
+Built by Raginee Chunkhare during a summer internship at the hospital (10 June – 10 July 2025), as part of the MIT School of Computing Summer Internship 2025 programme.
+
+## About the internship
+
+The goal was a simple, reliable, Marathi-friendly website that presents the hospital's departments, facilities, timings and health programs to the local community.
+
+| Week | Work |
+|---|---|
+| 1 | Data collection, staff interviews, floor mapping |
+| 2 | Marathi translation, floor-plan diagrams, wireframes |
+| 3 | HTML structure and CSS styling of the pages |
+| 4 | Browser testing, image optimization, documentation and handover |
+
+What I learned:
+
+- Rendering Marathi text correctly with Unicode and Devanagari web fonts.
+- Translating medical terms with help from hospital staff.
+- Responsive layouts with CSS Grid and Flexbox.
+- Testing across Chrome, Firefox and Edge, and keeping pages light for slow connections and older devices.
+
+Possible next steps: online appointment booking, real-time bed availability, emergency alerts and a patient feedback form.
 
 ## Pages
 
