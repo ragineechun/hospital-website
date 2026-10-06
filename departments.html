@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>वैद्यकीय विभाग</title>
+  <link rel="stylesheet" href="CSS_SHEETS/departments.css">
+</head>
+<body>
+
+  <!-- NAVBAR (same across site) -->
+  <header>
+    <nav class="navbar">
+  <a href="index.html">मुख्यपृष्ठ</a>
+  <a href="departments.html">विभाग</a>
+  <a href="infrastructure.html">सुविधा</a>
+  <a href="gallery.html">गॅलरी</a>
+  <a href="programs.html">कार्यक्रम</a>
+</nav>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="dept-hero">
+    <div class="dept-hero-inner">
+      <h1><span>वैद्यकीय</span> विभाग</h1>
+      <p>कै. सखाराम कुंडलिक कोद्रे प्रसूतीगृह येथे खालील विभागांमधून रुग्णांना दर्जेदार आणि सुलभ सेवा दिल्या जातात.</p>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section class="dept-grid">
+    <!-- OPD -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M9 5h6M9 3h6a2 2 0 0 1 2 2v2h2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7h2V5a2 2 0 0 1 2-2z"/></svg>
+      </span>
+      <h3>बाह्यरुग्ण विभाग (OPD)</h3>
+      <p>तपासणी, मूलभूत चाचण्या आणि त्वरित उपचार.</p>
+      <a class="see-more" href="#opd-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- FP -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.5"/><circle cx="16" cy="9" r="3"/><path d="M2 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1M14 20v-1a4 4 0 0 1 4-4h1"/></svg>
+      </span>
+      <h3>कुटुंब नियोजन</h3>
+      <p>गर्भधारणापूर्व/नंतर मार्गदर्शन, लसीकरण आणि योजना.</p>
+      <a class="see-more" href="#fp-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- IPD -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M3 7v10M3 13h18v4M7 13V9a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v4"/></svg>
+      </span>
+      <h3>आंतररुग्ण विभाग (IPD)</h3>
+      <p>प्रसूती, सलाईन/इंजेक्शन, प्रसूतीपश्चात काळजी.</p>
+      <a class="see-more" href="#ipd-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- OT -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M3 20h7l9-9a2 2 0 0 0-3-3l-9 9v3"/><path d="M3 20l4-4"/></svg>
+      </span>
+      <h3>शस्त्रक्रिया विभाग (OT)</h3>
+      <p>एमटीपी व कायमस्वरूपी संततीप्रतिबंधक शस्त्रक्रिया.</p>
+      <a class="see-more" href="#ot-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- Sonography -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M3 16h10l4 3h4M6 6h6a4 4 0 0 1 4 4v6"/><path d="M6 10h6M6 13h6"/></svg>
+      </span>
+      <h3>सोनोग्राफी</h3>
+      <p>मंगळ–बुध–शुक्र ९ ते ५ तपासण्या.</p>
+      <a class="see-more" href="#sono-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- X-Ray -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="M9 6h6M9 9h6M9 12h6M9 15h6M9 18h6"/></svg>
+      </span>
+      <h3>क्ष–किरण (X-Ray)</h3>
+      <p>पीएमसी–क्रस्ना भागीदारीत निदान सेवा.</p>
+      <a class="see-more" href="#xray-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- Lab -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M10 2v6L4 20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2L14 8V2"/><path d="M8 10h8"/></svg>
+      </span>
+      <h3>प्रयोगशाळा</h3>
+      <p>रक्त/लघवी नमुने – सार्वजनिक-खाजगी भागीदारीत.</p>
+      <a class="see-more" href="#lab-modal">अधिक जाणून घ्या</a>
+    </div>
+
+    <!-- Pharmacy -->
+    <div class="dept-card">
+      <span class="i">
+        <svg viewBox="0 0 24 24"><path d="M10 14l6-6a4 4 0 0 1 6 6l-6 6a4 4 0 0 1-6-6z"/><path d="M7 7l10 10"/></svg>
+      </span>
+      <h3>औषध विभाग</h3>
+      <p>विविध योजनांअंतर्गत मोफत औषधांचे वाटप.</p>
+      <a class="see-more" href="#pharm-modal">अधिक जाणून घ्या</a>
+    </div>
+  </section>
+
+  <!-- ===== CSS-ONLY MODALS (no JS) ===== -->
+
+  <!-- OPD -->
+  <section id="opd-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>बाह्यरुग्ण विभाग (OPD)</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <p class="lead">या विभागांमध्ये खालील सुविधा पुरविल्या जातात:</p>
+        <ul>
+          <li>तापमान, रक्तदाब, वजन व उंची तपासणी</li>
+          <li>वाफ देणे</li>
+          <li>मलेरिया/डेंगू/चिकनगुनिया तपासणीसाठी रक्त नमुना</li>
+          <li>छातीची पट्टी (E.C.G.)</li>
+          <li>मलमपट्टी (Dressing)</li>
+          <li>एचआयव्ही रक्त तपासणी (गरोदर व जनरल रुग्ण)</li>
+          <li>Inj. ARV, Equirab, H1N1, TT, Vitcofol इ. आपत्कालीन इंजेक्शन्स</li>
+          <li>आपत्कालीन परिस्थितीत OPD तत्त्वावर IV fluids</li>
+        </ul>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- Family Planning -->
+  <section id="fp-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>कुटुंब नियोजन विभाग</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>जननी सुरक्षा योजनेअंतर्गत गरोदर मातांची नोंदणी व नियमित तपासणी</li>
+          <li>प्रधानमंत्री मातृ वंदना योजना (PMMVY) राबविणे</li>
+          <li>दर महिन्याच्या ९ तारखेला प्रधानमंत्री सुरक्षित मातृत्व अभियान</li>
+          <li>गरोदर मातांचे तसेच ०–१६ वयोगटातील बालकांचे लसीकरण</li>
+          <li>तात्पुरत्या पद्धतींचे मार्गदर्शन/वाटप (निरोध, गोळ्या, इंजेक्शन)</li>
+          <li>Cu-T बसविणे</li>
+          <li>कायमस्वरूपी कुटुंब नियोजन शस्त्रक्रियांची माहिती व प्रेरणा</li>
+          <li>स्तनदा मातांना आरोग्य विषयक सल्ला</li>
+          <li>एकात्मिक बाल विकास सेवा; अंगणवाडी/आशा कार्यकर्तींना मार्गदर्शन</li>
+          <li>नागरी आरोग्य पोषक दिन (U.H.N.D.), असंसर्गजन्य रोगांचे शिबीर (N.C.D.)</li>
+          <li>स्तनपान सप्ताह, Outreach Camp</li>
+          <li>U.I.P. अंतर्गत लसी: IPV, MR, Oral Rotavirus, Td</li>
+        </ul>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- IPD -->
+  <section id="ipd-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>आंतररुग्ण विभाग (IPD)</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>गरोदर मातांची तपासणी व बाळाचे ठोके</li>
+          <li>उलटी/मळमळ/जुलाब इ. लक्षणांवर डॉक्टरांच्या सल्ल्याने सलाईन व इंजेक्शन्स</li>
+          <li>रक्तक्षय असलेल्या मातांसाठी Inj. Sucrofer 200mg सलाईन</li>
+          <li>प्रसूती करणे व प्रसूतीपश्चात माते-बाळाची काळजी</li>
+          <li>स्तनपानाविषयी मार्गदर्शन, आरोग्य सल्ले व वेळेवर औषधे</li>
+          <li>तांबी बसविणे व शस्त्रक्रिया केलेल्या रुग्णांची देखरेख</li>
+          <li>१० आठवड्यांपर्यंत गर्भपातानंतर रुग्णांची काळजी</li>
+          <li>मयत पास देणे</li>
+          <li>प्रसूतीनंतर कुटुंब नियोजन पद्धतींचे मार्गदर्शन</li>
+        </ul>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- OT -->
+  <section id="ot-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>शस्त्रक्रिया विभाग (OT)</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>१० आठवड्यांपर्यंत गर्भपात (MTP)</li>
+          <li>कायमस्वरूपी संततीप्रतिबंधक शस्त्रक्रिया</li>
+        </ul>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- Sonography -->
+  <section id="sono-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>सोनोग्राफी विभाग</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <p>दर <b>मंगळवार, बुधवार आणि शुक्रवार</b> रोजी <b>सकाळी ९ ते संध्याकाळी ५</b> या वेळेत गरोदर स्त्रिया व इतर सोनोग्राफी तपासण्या केल्या जातात.</p>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- X-Ray -->
+  <section id="xray-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>क्ष-किरण विभाग (X-Ray)</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <p>पुणे महानगरपालिका व <b>क्रस्ना डायग्नोस्टिक प्रा. लि.</b> यांच्या संयुक्त उपक्रमाद्वारे सार्वजनिक-खाजगी भागीदारी तत्त्वावर एक्स-रे इत्यादी सेवा दिल्या जातात.</p>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- Lab -->
+  <section id="lab-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>प्रयोगशाळा तपासणी</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <p>या विभागामध्ये देखील पुणे महानगरपालिका व क्रस्ना डायग्नोस्टिक प्रा. लि. यांच्या संयुक्त उपक्रमाद्वारे सार्वजनिक-खाजगी भागीदारी तत्त्वावर रुग्णाचे <b>रक्त व लघवीचे नमुने</b> तपासणीसाठी घेतले जातात.</p>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+
+  <!-- Pharmacy -->
+  <section id="pharm-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>औषध विभाग</h3>
+        <a class="modal-close" href="#close">बंद</a>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>सर्व रुग्णांना मोफत औषधांचे वाटप</li>
+          <li>शहरी गरीब योजना व अंशदायी (C.H.S.) अंतर्गत औषधे</li>
+          <li>क्षयरोग व कुष्ठरोगावरील औषधांचे वाटप</li>
+        </ul>
+      </div>
+    </div>
+    <a class="modal-backdrop" href="#close"></a>
+  </section>
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <!-- Brand / About -->
+    <div class="foot-col foot-brand">
+      
+      <h3>कै. सखाराम कुंडलिक कोद्रे प्रसूतीगृह</h3>
+      <p class="foot-desc">
+        आमच्या समाजाला सहानुभूती, उत्कृष्टता आणि समर्पणासह गुणवत्तापूर्ण आरोग्य सेवा.
+      </p>
+
+      <ul class="foot-contact">
+        <li><span>📞</span>दूरध्वनी: <a href="tel:02026890079">020 2689 0079</a></li>
+        <li><span>📍</span>पत्ता: Police Station, Magarpatta, Mundhwa, Pune, Maharashtra 411036</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="foot-col">
+      <h4>द्रुत दुवे</h4>
+      <ul class="foot-links">
+        <li><a href="index.html">मुख्यपृष्ठ</a></li>
+        <li><a href="departments.html">विभाग</a></li>
+        <li><a href="infrastructure.html">सुविधा</a></li>
+        <li><a href="gallery.html">गॅलरी</a></li>
+        <li><a href="programs.html">कार्यक्रम</a></li>
+      </ul>
+    </div>
+
+    <!-- Services list (optional) -->
+    <div class="foot-col">
+      <h4>आमच्या सेवा</h4>
+      <ul class="foot-links">
+        <li>आपत्कालीन सेवा (२४x७)</li>
+        <li>बाह्यरुग्ण विभाग (ओपीडी)</li>
+        <li>शस्त्रक्रिया</li>
+        <li>प्रसूती सेवा</li>
+        <li>बालरोग</li>
+      </ul>
+    </div>
+
+    <!-- Hours / Timing -->
+    <div class="foot-col">
+      <h4>वेळा</h4>
+      <ul class="foot-hours">
+        <li><span>सोमवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>मंगळवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>बुधवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>गुरुवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>शुक्रवार</span><em>९:०० am – ५:०० pm</em> <b class="note">※ स्वातंत्र्य दिनी वेळा बदलू शकतात</b></li>
+        <li><span>शनिवार</span><em>९:०० am – १:०० pm</em></li>
+        <li><span>रविवार</span><em>बंद</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot-bottom">
+    <p>© <span id="yr"></span> कै. सखाराम कुंडलिक कोद्रे प्रसूतीगृह. सर्व हक्क राखीव.</p>
+  </div>
+</footer>
+
+<script>
+  // set current year in footer
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

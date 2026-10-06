@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>कार्यक्रम</title>
+
+  <!-- (optional but makes Marathi text look great) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="CSS_SHEETS/programs.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+   <nav class="navbar">
+      <a href="index.html">मुख्यपृष्ठ</a>
+      <a href="departments.html">विभाग</a>
+      <a href="infrastructure.html">सुविधा</a>
+      <a href="gallery.html">गॅलरी</a>
+      <a href="programs.html">कार्यक्रम</a>
+  </nav>
+
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="prog-hero">
+    <div class="wrap">
+      <p class="chip">समुदाय कार्यक्रम</p>
+      <h1>विविध उपक्रम</h1>
+      <p class="lead">
+        आरोग्यसेवा उत्कृष्टता आणि समुदाय कल्याणासाठी आमची वचनबद्धता बळकट करणारे आमचे विविध कार्यक्रम,
+        उत्सव आणि उपक्रम शोधा.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== रुग्णालय उपक्रम ===== -->
+  <section class="prog-section">
+    <div class="container">
+      <div class="section-head center">
+        <h2><span>रुग्णालयातर्फे</span> राबविण्यात येणारे विविध उपक्रम</h2>
+        <p>रुग्ण व कुटुंबांच्या आरोग्यजाणीवा वाढविण्यासाठी सातत्याने राबविले जाणारे उपक्रम.</p>
+      </div>
+      <div id="hospitalPrograms" class="prog-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== राष्ट्रीय उपक्रम ===== -->
+  <section class="prog-section alt">
+    <div class="container">
+      <div class="section-head center">
+        <h2><span>राष्ट्रीय</span> उपक्रम</h2>
+        <p>केंद्र/राज्य सरकारच्या आरोग्य कार्यक्रमांचे स्थानिक पातळीवर प्रभावी राबविणे.</p>
+      </div>
+      <div id="nationalPrograms" class="prog-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== Highlights ===== -->
+  <section class="prog-highlights">
+    <div class="container">
+      <h2 class="center">हायलाइट्स व विशेष मोहिमा</h2>
+      <ul id="highlights" class="chiplist"></ul>
+    </div>
+  </section>
+
+  <!-- ===== INLINE JS (kept here to avoid path issues) ===== -->
+  <script>
+  // ---------- Data ----------
+  const hospitalPrograms = [
+    { title:"स्तनपान सप्ताह", icon:"🍼", colors:["#efe6ff","#ffffff"],
+      brief:"नवमातांना योग्य स्तनपान पद्धती, पोषण व बाळाच्या वाढीबाबत मार्गदर्शन.",
+      detail:"त्वचा-त्वचेचा स्पर्श, पहिल्या तासातील स्तनपान, पंपिंग/स्टोरेज व कार्यरत मातांसाठी टिप्स यावर प्रात्यक्षिक सत्रे."
+    },
+    { title:"एड्स दिन", icon:"🩺", colors:["#f7e8ff","#ffffff"],
+      brief:"एचआयव्ही/एड्सविषयी जनजागृती व कलंक निर्मूलन मोहीम.",
+      detail:"रक्ताव्दारे/लैंगिक संसर्ग, सुरक्षित व्यवहार, तपासणी व औषधोपचाराच्या उपलब्ध सेवांबद्दल माहिती."
+    },
+    { title:"स्वच्छता अभियान", icon:"🧹", colors:["#eaf0ff","#ffffff"],
+      brief:"रुग्णालय परिसर व समुदायातील स्वच्छता-स्वास्थ्य हमीसाठी उपक्रम.",
+      detail:"कचरा वर्गीकरण, हात धुण्याची योग्य पद्धत, डास निर्मूलन व स्वच्छ शौचालय वापर जनजागृती."
+    },
+    { title:"गरोदर मातांना मार्गदर्शन", icon:"🤰", colors:["#ffeaf3","#ffffff"],
+      brief:"गर्भधारणेदरम्यान पोषण, तपासण्या, व्यायाम व प्रसूतीपूर्व तयारी.",
+      detail:"आयर्न-कॅल्शियम सेवन, उच्चजोखीम लक्षणे, जलबॅग/जन्म योजना व नवजात काळजीचे प्रशिक्षण."
+    },
+    { title:"अतिसार प्रतिबंध पंधरवडा", icon:"💧", colors:["#eafcff","#ffffff"],
+      brief:"ओआरएस, जस्त गोळ्या व स्वच्छ पाण्याचे महत्त्व जनतेपर्यंत.",
+      detail:"बालकांमधील निर्जलीकरण ओळखणे, घरच्या घरी तयार ओआरएसचा वापर व सलाईन कधी घ्यावी यावर मार्गदर्शन."
+    },
+    { title:"डेंगू कॉर्नर", icon:"🦟", colors:["#fff1e6","#ffffff"],
+      brief:"डास नियंत्रण, ताप/प्लेटलेट्सची माहिती व तातडीची काळजी.",
+      detail:"पाणी साचलेली ठिकाणे नष्ट करणे, मच्छरदाणी/प्रतिबंधक वापर, इशारे लक्षणे समजावून सांगणे."
+    },
+    { title:"बेटी बचाओ, बेटी पढाओ", icon:"👧", colors:["#f5eaff","#ffffff"],
+      brief:"कन्या भ्रूणहत्या प्रतिबंध, शिक्षण-पोषणासाठी जागृती.",
+      detail:"लिंग निवड बंदी कायदा माहिती, शिष्यवृत्ती योजना व मुलींच्या आरोग्य तपासण्यांवर भर."
+    },
+    { title:"आऊट-रीच कॅम्प", icon:"🚑", colors:["#e8fff1","#ffffff"],
+      brief:"दुर्गम/वस्ती भागात मोफत तपासणी व औषध वितरण.",
+      detail:"प्राथमिक तपासणी, आई-बाळ लसीकरण, रक्तदाब/साखर तपासणी व रेफरल सुविधा."
+    },
+    { title:"UHND (शहरी आरोग्य पोषण दिन)", icon:"🥗", colors:["#e9fff7","#ffffff"],
+      brief:"कुपोषण प्रतिबंध, वाढ चार्ट निगराणी व आरोग्य सल्ला.",
+      detail:"आई-बाळ वजन/उंची नोंद, आयर्न-फोलेट पूरक, स्तनपान-अन्नपूरक आहार मार्गदर्शन."
+    },
+    { title:"NCD कॅम्प", icon:"🩸", colors:["#ffeef0","#ffffff"],
+      brief:"हायपरटेन्शन, डायबेटीस, कर्करोगाची लवकर तपासणी.",
+      detail:"रक्तदाब/साखर मोजणी, तंबाखूविरुद्ध सल्ला, कर्करोग लक्षणे व रेफरल."
+    },
+    { title:"MR कॅम्पेन", icon:"💉", colors:["#fff5e8","#ffffff"],
+      brief:"गोवर-रुबेला विरुद्ध लसीकरणाचे व्यापक अभियान.",
+      detail:"शाळा-समुदाय पातळीवर विशेष सत्रे, मिस्ड-आउट मुलांची ‘कॅच-अप’ रणनीती."
+    },
+    { title:"आयुष गार्डन", icon:"🌿", colors:["#eafcf0","#ffffff"],
+      brief:"औषधी वनस्पतींचे शिक्षण व घरगुती उपचार जागृती.",
+      detail:"तुळस, अजवायन, अद्रक इ. गुणधर्मांचे प्रात्यक्षिक, हंगामी आजारांवरील उपयोग."
+    },
+  ];
+
+  const nationalPrograms = [
+    { title:"PMSSY", icon:"🏥", colors:["#efe6ff","#ffffff"],
+      brief:"आरोग्यसेवा सुविधांची क्षमता व दर्जा उंचावणे.",
+      detail:"उपकरणे, मानवबल व विशेष सेवांचा विस्तार—तृतीयक काळजी अधिक सुलभ."
+    },
+    { title:"जननी शिशु सुरक्षा", icon:"👶", colors:["#ffeaf3","#ffffff"],
+      brief:"मातृ-शिशु आरोग्य सेवांचा सुरक्षित व मोफत लाभ.",
+      detail:"प्रसूती-पूर्व/पश्चात काळजी, नवजात लसीकरण व २४×७ सुविधा."
+    },
+    { title:"जननी सुरक्षा योजना", icon:"👩‍🍼", colors:["#f7e8ff","#ffffff"],
+      brief:"सरकारी संस्थेत सुरक्षित प्रसूतीस प्रोत्साहन व आर्थिक मदत.",
+      detail:"नोंदणी, प्रसूती/प्रवासासाठी भत्ते व रेफरल समर्थन."
+    },
+    { title:"राष्ट्रीय आरोग्य अभियान", icon:"📋", colors:["#eaf0ff","#ffffff"],
+      brief:"प्राथमिक-ग्रामस्तरावर दर्जेदार आरोग्य सेवा.",
+      detail:"रोगनियंत्रण, माता-बाल आरोग्य, NCD व IEC उपक्रमांचे एकत्रित अंमलबजावणी."
+    },
+    { title:"पल्स पोलिओ", icon:"🧒", colors:["#fff5e8","#ffffff"],
+      brief:"०-५ वयोगटातील बालकांना पोलिओ प्रतिबंधक थेंब.",
+      detail:"बूथ व घर-घर मोहीम, मोबाईल टीम, हाय-रिस्क क्षेत्रांवर विशेष भर."
+    },
+    { title:"मिशन इंद्रधनुष", icon:"🌈", colors:["#e9fff7","#ffffff"],
+      brief:"सर्व लसी पूर्ण डोसने, ‘मिस्ड-आउट’ मुलांचा शोध.",
+      detail:"उच्च कव्हरेजसाठी विशेष कॅम्प व मॉनिटरिंग."
+    },
+    { title:"राष्ट्रीय पोषण अभियान", icon:"🥗", colors:["#e8fff1","#ffffff"],
+      brief:"कुपोषण विरोध, पोषक आहार सवयीचा प्रसार.",
+      detail:"आई-बाळ वजन निगराणी, IFA, पोषण-मेला उपक्रम."
+    },
+    { title:"सार्वत्रिक लसीकरण", icon:"💉", colors:["#f5eaff","#ffffff"],
+      brief:"जन्मापासून किशोरवयापर्यंत सर्व लसी वेळेवर.",
+      detail:"IPV, MR, Td इ. वेळापत्रक व स्मरण प्रणाली."
+    },
+    { title:"WIFS (साप्ताहिक IFA)", icon:"🩺", colors:["#ffeef0","#ffffff"],
+      brief:"शालेय/किशोरवयीन मुलींना आठवड्याला IFA टॅब्लेट.",
+      detail:"अ‍ॅनिमिया कमी करण्यासाठी समुपदेशन व फॉलो-अप."
+    },
+    { title:"RNTCP (क्षयरोग)", icon:"🫁", colors:["#fff1e6","#ffffff"],
+      brief:"तपासणी, DOTS उपचार व संपर्कांची स्क्रिनिंग.",
+      detail:"औषधे मोफत, पोषण सहाय्य, फॉलो-अप व्यवस्थापन."
+    },
+    { title:"कुष्ठरोग निर्मूलन", icon:"🧑‍⚕️", colors:["#eaf0ff","#ffffff"],
+      brief:"लवकर निदान, MDT व कलंक निर्मूलन.",
+      detail:"सपोर्टिव्ह साधने, फॉलो-अप व पुनर्वसन सल्ला."
+    },
+    { title:"राष्ट्रीय एड्स नियंत्रण", icon:"🧬", colors:["#f7e8ff","#ffffff"],
+      brief:"जनजागृती, तपासणी व ART सेवांशी जोडणी.",
+      detail:"जागरूकता मोहिमा, रक्त सुरक्षितता, PMTCT सेवा."
+    },
+    { title:"बालवाडी पोषण कार्यक्रम", icon:"🍎", colors:["#eafcf0","#ffffff"],
+      brief:"अंगणवाड्यांत पूरक आहार व आरोग्य निगराणी.",
+      detail:"वजन/उंची नोंद, डे-केअर तपासणी व आई-सभांद्वारे शिक्षण."
+    },
+    { title:"वेक्टर बॉर्न रोग नियंत्रण", icon:"🦟", colors:["#e9fff7","#ffffff"],
+      brief:"मलेरिया, डेंग्यू, चिकनगुनिया प्रतिबंध व उपचार मार्गदर्शन.",
+      detail:"स्रोत नाश, फॉगिंग, लवकर तपासणी व रेफरल."
+    }
+  ];
+
+  const highlights = [
+    "Cu-T लक्ष्य प्राप्त पुरस्कार","आरोग्य तपासणी शिबीर","पल्स पोलिओ विशेष ड्राईव्ह",
+    "PMMVY जनजागृती","AIDS दिवस मोहीम","MR (गोवर-रुबेला) मोहीम",
+    "बांधकाम/स्थलांतरित शिबिरे","आयुष गार्डन"
+  ];
+
+  // ---------- Render helpers ----------
+  function makeCard({title, icon, colors, brief, detail}){
+    const el = document.createElement('article');
+    el.className = 'prog-card';
+    el.style.setProperty('--start', colors[0]);
+    el.style.setProperty('--end', colors[1]);
+    el.innerHTML = `
+      <span class="i">${icon}</span>
+      <h3>${title}</h3>
+      <p>${brief}</p>
+      <div class="readmore">
+        <button type="button" aria-expanded="false">अधिक वाचा</button>
+        <div class="more" role="region" aria-label="${title} विस्तृत माहिती">
+          <p>${detail}</p>
+        </div>
+      </div>`;
+    const rm = el.querySelector('.readmore');
+    const btn = rm.querySelector('button');
+    btn.addEventListener('click', ()=>{
+      rm.classList.toggle('open');
+      const open = rm.classList.contains('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'कमी दाखवा' : 'अधिक वाचा';
+    });
+    return el;
+  }
+
+  function renderList(rootId, list){
+    const root = document.getElementById(rootId);
+    list.forEach(item => root.appendChild(makeCard(item)));
+  }
+  function renderHighlights(){
+    const ul = document.getElementById('highlights');
+    highlights.forEach(t => {
+      const li = document.createElement('li');
+      li.className = 'chip';
+      li.textContent = t;
+      ul.appendChild(li);
+    });
+  }
+
+  // ---------- Init ----------
+  renderList('hospitalPrograms', hospitalPrograms);
+  renderList('nationalPrograms', nationalPrograms);
+  renderHighlights();
+  </script>
+  <footer class="site-footer">
+  <div class="footer-wrap">
+    <!-- Brand / About -->
+    <div class="foot-col foot-brand">
+      
+      <h3>कै. सखाराम कुंडलिक कोद्रे प्रसूतीगृह</h3>
+      <p class="foot-desc">
+        आमच्या समाजाला सहानुभूती, उत्कृष्टता आणि समर्पणासह गुणवत्तापूर्ण आरोग्य सेवा.
+      </p>
+
+      <ul class="foot-contact">
+        <li><span>📞</span>दूरध्वनी: <a href="tel:02026890079">020 2689 0079</a></li>
+        <li><span>📍</span>पत्ता: Police Station, Magarpatta, Mundhwa, Pune, Maharashtra 411036</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="foot-col">
+      <h4>द्रुत दुवे</h4>
+      <ul class="foot-links">
+        <li><a href="index.html">मुख्यपृष्ठ</a></li>
+        <li><a href="departments.html">विभाग</a></li>
+        <li><a href="infrastructure.html">सुविधा</a></li>
+        <li><a href="gallery.html">गॅलरी</a></li>
+        <li><a href="programs.html">कार्यक्रम</a></li>
+      </ul>
+    </div>
+
+    <!-- Services list (optional) -->
+    <div class="foot-col">
+      <h4>आमच्या सेवा</h4>
+      <ul class="foot-links">
+        <li>आपत्कालीन सेवा (२४x७)</li>
+        <li>बाह्यरुग्ण विभाग (ओपीडी)</li>
+        <li>शस्त्रक्रिया</li>
+        <li>प्रसूती सेवा</li>
+        <li>बालरोग</li>
+      </ul>
+    </div>
+
+    <!-- Hours / Timing -->
+    <div class="foot-col">
+      <h4>वेळा</h4>
+      <ul class="foot-hours">
+        <li><span>सोमवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>मंगळवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>बुधवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>गुरुवार</span><em>९:०० am – ५:०० pm</em></li>
+        <li><span>शुक्रवार</span><em>९:०० am – ५:०० pm</em> <b class="note">※ स्वातंत्र्य दिनी वेळा बदलू शकतात</b></li>
+        <li><span>शनिवार</span><em>९:०० am – १:०० pm</em></li>
+        <li><span>रविवार</span><em>बंद</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot-bottom">
+    <p>© <span id="yr"></span> कै. सखाराम कुंडलिक कोद्रे प्रसूतीगृह. सर्व हक्क राखीव.</p>
+  </div>
+</footer>
+
+</body>
+</html>
